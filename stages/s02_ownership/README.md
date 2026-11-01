@@ -2,6 +2,9 @@
 
 Rust を選ぶ理由の多くは、この Stage の内容にあります。
 
+> **前提知識**: [03 スタックとヒープ](../../docs/fundamentals/03_memory.md) / [04 ポインタとメモリ安全性](../../docs/fundamentals/04_pointers.md) / [06 計算量](../../docs/fundamentals/06_complexity.md)
+> 所有権のルールは、この3つを知っていると「なぜそうなっているのか」が分かります。**先に読むことを強く勧めます。**
+
 ---
 
 ## 1. メモリ管理の3つの流派

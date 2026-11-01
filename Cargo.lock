@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "fundamentals"
+version = "0.1.0"
+
+[[package]]
 name = "s01_basics"
 version = "0.1.0"
 

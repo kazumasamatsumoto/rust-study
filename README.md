@@ -3,7 +3,18 @@
 ゼロから「立派な Rust エンジニア」になるための学習リポジトリ。
 Claude Code をメンターにして、課題 → テスト → レビューのサイクルで鍛えます。
 
+鍛えるのは2つの力です。
+
+- **書く力**: `todo!()` を埋めて、テストを通す
+- **選ぶ力（選球眼）**: なぜこの技術・設計なのか、他の案と比べてどうなのかを言葉にする
+
 ## 進め方
+
+各ステージは **解説を読む → コードを書く → 問いに答える** の3ステップで進めます。
+
+1. `stages/sXX/README.md` の解説を読む（なぜこう設計されているのか、他の言語との比較）
+2. 課題の `todo!()` を実装する
+3. README の最後にある「設計の問い」に、`answers/sXX.md` で答える
 
 ```bash
 # 1. ステージの課題ファイルを開いて todo!() を実装する
@@ -24,8 +35,9 @@ cargo clippy --workspace --all-targets -- -D warnings
 
 1. `lib.rs` の `#![allow(...)]` 行を消して、警告が出ないことを確認
 2. `progress.txt` にステージ名（例: `s01_basics`）を追記
-3. ブランチを切って PR を作成 → CI が通るか確認
-4. Claude Code に「PR をレビューして」と頼む
+3. `answers/sXX.md` に設計の問いの回答を書く
+4. ブランチを切って PR を作成 → CI が通るか確認
+5. Claude Code に「PR をレビューして」と頼む（コードと回答の両方をレビューします）
 
 > **ルール**: 詰まったら答えではなく **ヒント** を聞くこと。
 > 「ヒント1をください」→ それでも無理なら「ヒント2」…と段階的に。
@@ -53,7 +65,17 @@ cargo clippy --workspace --all-targets -- -D warnings
 | s10_concurrency | スレッド・チャネル・Arc / Mutex | 🔒 |
 | s11_async | async/await と tokio | 🔒 |
 
+### 選球眼トラック（並行して進める）
+
+| ドキュメント | 内容 |
+|---|---|
+| [docs/judgment/01_when_to_use_rust.md](docs/judgment/01_when_to_use_rust.md) | Rust を選ぶべき時・選ぶべきでない時 |
+| [docs/judgment/02_choosing_crates.md](docs/judgment/02_choosing_crates.md) | クレートの選び方・定番クレートが選ばれる理由 |
+| [docs/judgment/03_adr.md](docs/judgment/03_adr.md) | 技術判断を ADR として記録する |
+
 ### Part 3: プロジェクト（自分で設計して作る）
+
+Part 3 では、要件だけが渡されます。設計と技術選定は自分で行い、主な判断ごとに ADR を書きます。
 
 | Project | 内容 | 学べること |
 |---|---|---|

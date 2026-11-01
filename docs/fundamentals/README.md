@@ -21,9 +21,9 @@ Rust は、コンピュータの中で実際に何が起きているかを隠さ
 | [04](04_pointers.md) | ポインタと、メモリ安全性のバグ | `memory_layout` | s02, s07, s08 |
 | [05](05_text_encoding.md) | 文字コードと UTF-8 | `utf8` | s01, s02 |
 | [06](06_complexity.md) | 計算量とデータ構造 | `vec_growth` | s02, s05 |
-| 07 | 静的ディスパッチと動的ディスパッチ | 🔒 | s06 |
-| 08 | プロセス・スレッド・データ競合 | 🔒 | s10 |
-| 09 | I/O モデルと非同期処理 | 🔒 | s11 |
-| 10 | コンパイルとリンク、最適化 | 🔒 | s09 |
+| [07](07_dispatch.md) | 静的ディスパッチと動的ディスパッチ | `dispatch` | s06 |
+| [08](08_concurrency.md) | プロセス・スレッド・データ競合 | `threads` | s10 |
+| [09](09_io_async.md) | I/O モデルと非同期処理 | `io_latency` | s11 |
+| [10](10_compilation.md) | コンパイルとリンク、最適化 | `optimization` | s09 |
 
-🔒 のものは、関係するステージの前に追加します。
+速度を比べる実験（`dispatch`, `threads`, `optimization`, `io_latency`）は `--release` を付けて実行してください。

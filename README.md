@@ -53,18 +53,18 @@ cargo clippy --workspace --all-targets -- -D warnings
 | [s02_ownership](stages/s02_ownership) | 所有権・借用・スライス | ⬜ |
 | [s03_structs_enums](stages/s03_structs_enums) | 構造体・列挙型・パターンマッチ | ⬜ |
 | [s04_errors](stages/s04_errors) | Option / Result / 独自エラー型 | ⬜ |
-| s05_collections | Vec / HashMap / イテレータ・クロージャ | 🔒 |
-| s06_traits | トレイト・ジェネリクス・トレイトオブジェクト | 🔒 |
-| s07_lifetimes | ライフタイム | 🔒 |
-| s08_smart_pointers | Box / Rc / RefCell / Drop | 🔒 |
+| [s05_collections](stages/s05_collections) | Vec / HashMap / イテレータ・クロージャ | ⬜ |
+| [s06_traits](stages/s06_traits) | トレイト・ジェネリクス・トレイトオブジェクト | ⬜ |
+| [s07_lifetimes](stages/s07_lifetimes) | ライフタイム | ⬜ |
+| [s08_smart_pointers](stages/s08_smart_pointers) | Box / Rc / RefCell / Drop | ⬜ |
 
 ### Part 2: 実践
 
 | Stage | テーマ | 状態 |
 |---|---|---|
-| s09_modules_testing | モジュール設計・統合テスト・doc テスト | 🔒 |
-| s10_concurrency | スレッド・チャネル・Arc / Mutex | 🔒 |
-| s11_async | async/await と tokio | 🔒 |
+| [s09_modules_testing](stages/s09_modules_testing) | モジュール設計・統合テスト・doc テスト | ⬜ |
+| [s10_concurrency](stages/s10_concurrency) | スレッド・チャネル・Arc / Mutex | ⬜ |
+| [s11_async](stages/s11_async) | async/await と tokio | ⬜ |
 
 ### CS基礎トラック（並行して進める）
 
@@ -83,6 +83,10 @@ cargo run -p fundamentals --example memory_layout  # スタックとヒープ、
 | 04 | ポインタと、メモリ安全性のバグ | s02 |
 | 05 | 文字コードと UTF-8 | s01, s02 |
 | 06 | 計算量とデータ構造 | s02, s05 |
+| 07 | 静的ディスパッチと動的ディスパッチ（単相化、vtable） | s06 |
+| 08 | プロセス・スレッド・データ競合 | s10 |
+| 09 | I/O モデルと非同期処理（C10K、epoll、Future） | s11 |
+| 10 | コンパイルとリンク、最適化 | s09 |
 
 ### 選球眼トラック（並行して進める）
 
@@ -94,16 +98,15 @@ cargo run -p fundamentals --example memory_layout  # スタックとヒープ、
 
 ### Part 3: プロジェクト（自分で設計して作る）
 
-Part 3 では、要件だけが渡されます。設計と技術選定は自分で行い、主な判断ごとに ADR を書きます。
+Part 3 では、要件だけが渡されます。設計と技術選定は自分で行い、主な判断ごとに ADR を書きます。→ [projects/](projects/)
 
 | Project | 内容 | 学べること |
 |---|---|---|
-| p01_logscope | ログファイル解析 CLI | clap, ファイル I/O, エラー設計 |
-| p02_kvstore | 永続化付きキーバリューストア | serde, ファイルフォーマット設計, ベンチマーク |
-| p03_http_server | マルチスレッド HTTP サーバ | TCP, スレッドプール, プロトコル実装 |
-| p04_web_api | axum による REST API + DB | async, sqlx, 実務的な構成 |
+| [p01_logscope](projects/p01_logscope/SPEC.md) | ログファイル解析 CLI | clap, ファイル I/O, エラー設計 |
+| [p02_kvstore](projects/p02_kvstore/SPEC.md) | 永続化付きキーバリューストア | serde, ファイルフォーマット設計, ベンチマーク |
+| [p03_http_server](projects/p03_http_server/SPEC.md) | マルチスレッド HTTP サーバ | TCP, スレッドプール, プロトコル実装 |
+| [p04_web_api](projects/p04_web_api/SPEC.md) | axum による REST API + DB | async, sqlx, 実務的な構成 |
 
-🔒 のステージは、前のステージをクリアした時点で Claude が作成します。
 
 ## 参考資料
 

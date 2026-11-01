@@ -1,0 +1,10 @@
+[package]
+name = "s11_async"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.54.1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"] }
+
+[dev-dependencies]
+tokio = { version = "1.54.1", features = ["rt", "rt-multi-thread", "macros", "time", "sync", "test-util"] }

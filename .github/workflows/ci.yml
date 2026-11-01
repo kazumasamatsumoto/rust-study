@@ -10,6 +10,8 @@ env:
 jobs:
   check:
     runs-on: ubuntu-latest
+    # s10 の課題は、解答が間違っているとデッドロックしてテストが終わらないことがある
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable

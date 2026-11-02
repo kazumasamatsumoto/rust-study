@@ -50,7 +50,7 @@
 ## カリキュラムの進め方
 
 - ロードマップは `README.md` にある。
-- s01〜s15、CS基礎 01〜14、コードリーディング 01〜04、選球眼 01〜06、Part 3 の要件（`projects/*/SPEC.md`）は作成済み。
+- s01〜s17、CS基礎 01〜15、コードリーディング 01〜04、選球眼 01〜06、Part 3 の要件（`projects/*/SPEC.md`）は作成済み。
 - コードリーディングで標準ライブラリのソースを引用するときは、`rustc --print sysroot` 以下の rust-src から実際に抜き出し、Rust のバージョンを明記する。
 - 学習者の弱点に合わせて追加のステージや課題を作るときは、次の手順に従う:
   - `stages/sXX_name/` に lib クレートを作る（`cargo new --lib --vcs none`）
@@ -64,6 +64,8 @@
 - Part 3 のプロジェクトでは、要件だけ与えて設計は学習者にさせる。
 
 ## コマンド
+
+- WASM のビルド: `cargo build -p s17_wasm --target wasm32-unknown-unknown --release` → `node stages/s17_wasm/host/run.mjs`
 
 - テスト: `cargo test -p <stage>`（課題単位: `cargo test -p <stage> ex01`）
 - Lint: `cargo clippy --workspace --all-targets -- -D warnings`

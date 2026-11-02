@@ -1,0 +1,11 @@
+[package]
+name = "s17_wasm"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+# cdylib: 他の言語から読み込める形式（WASM モジュールや .so/.dylib）として出力する
+# rlib  : 普通の Rust ライブラリとしても出力する（ネイティブで cargo test するために必要）
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]

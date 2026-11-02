@@ -29,5 +29,6 @@ Rust は、コンピュータの中で実際に何が起きているかを隠さ
 | [12](12_memory_hierarchy.md) | メモリ階層と CPU キャッシュ | `cache` | s15 |
 | [13](13_os_syscalls.md) | OS とシステムコール、ファイル I/O | `syscalls` | p01, p02 |
 | [14](14_storage_engines.md) | データベースの保存の仕組み（ログ、B-tree、LSM） | `append_log` | p02 |
+| [15](15_webassembly.md) | WebAssembly の仕組み | `wasm_inspect` | s17 |
 
 速度を比べる実験（`dispatch`, `threads`, `optimization`, `io_latency`, `cache`, `syscalls`）は `--release` を付けて実行してください。

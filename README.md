@@ -74,6 +74,8 @@ cargo clippy --workspace --all-targets -- -D warnings
 | [s13_unsafe_ffi](stages/s13_unsafe_ffi) | unsafe、未定義動作、安全な API で包む、C の関数を呼ぶ | ⬜ |
 | [s14_type_design](stages/s14_type_design) | newtype、typestate、PhantomData、sealed trait | ⬜ |
 | [s15_performance](stages/s15_performance) | 計測の作法、アロケーションを減らす、計算量、ハッシュ関数 | ⬜ |
+| [s16_async_internals](stages/s16_async_internals) | Future・Waker・Pin、async ランタイムを自作する | ⬜ |
+| [s17_wasm](stages/s17_wasm) | WebAssembly を素のまま扱う、線形メモリ、JS との境界 | ⬜ |
 
 ### CS基礎トラック（並行して進める）
 
@@ -100,6 +102,7 @@ cargo run -p fundamentals --example memory_layout  # スタックとヒープ、
 | 12 | メモリ階層と CPU キャッシュ | s15 |
 | 13 | OS とシステムコール、ファイル I/O | p01, p02 |
 | 14 | データベースの保存の仕組み | p02 |
+| 15 | WebAssembly の仕組み（スタックマシン、線形メモリ、サンドボックス） | s17 |
 
 ### 選球眼トラック（並行して進める）
 
@@ -145,7 +148,7 @@ Part 3 では、要件だけが渡されます。設計と技術選定は自分�
 4. **s07** → **s08**
 5. CS10 → **s09** → 選04 → CS08 → **s10** → CS09 → **s11**
 6. Part 3: 選02・03 → CS13 → **p01** → CS14 → **p02** → CS11 → **p03** → **p04**
-7. Part 4: **s12** → **s13** → **s14** → 選05 → CS12 → **s15**
+7. Part 4: **s12** → **s13** → **s14** → 選05 → CS12 → **s15** → **s16**（s11 の後ならいつでも） → CS15 → **s17**（s13 の後）
 8. 選06 はいつ読んでも構いません
 
 Part 4 は、Part 3 の前に進めても構いません。

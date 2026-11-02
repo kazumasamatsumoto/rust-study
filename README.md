@@ -66,6 +66,15 @@ cargo clippy --workspace --all-targets -- -D warnings
 | [s10_concurrency](stages/s10_concurrency) | スレッド・チャネル・Arc / Mutex | ⬜ |
 | [s11_async](stages/s11_async) | async/await と tokio | ⬜ |
 
+### Part 4: 上級
+
+| Stage | テーマ | 状態 |
+|---|---|---|
+| [s12_macros](stages/s12_macros) | macro_rules!、衛生性、マクロと関数の使い分け | ⬜ |
+| [s13_unsafe_ffi](stages/s13_unsafe_ffi) | unsafe、未定義動作、安全な API で包む、C の関数を呼ぶ | ⬜ |
+| [s14_type_design](stages/s14_type_design) | newtype、typestate、PhantomData、sealed trait | ⬜ |
+| [s15_performance](stages/s15_performance) | 計測の作法、アロケーションを減らす、計算量、ハッシュ関数 | ⬜ |
+
 ### CS基礎トラック（並行して進める）
 
 Rust の設計の背景にある理論を、動かせる実験と一緒に学びます。→ [docs/fundamentals/](docs/fundamentals/)
@@ -87,6 +96,10 @@ cargo run -p fundamentals --example memory_layout  # スタックとヒープ、
 | 08 | プロセス・スレッド・データ競合 | s10 |
 | 09 | I/O モデルと非同期処理（C10K、epoll、Future） | s11 |
 | 10 | コンパイルとリンク、最適化 | s09 |
+| 11 | ネットワーク: TCP/IP と HTTP | p03, p04 |
+| 12 | メモリ階層と CPU キャッシュ | s15 |
+| 13 | OS とシステムコール、ファイル I/O | p01, p02 |
+| 14 | データベースの保存の仕組み | p02 |
 
 ### 選球眼トラック（並行して進める）
 
@@ -95,6 +108,20 @@ cargo run -p fundamentals --example memory_layout  # スタックとヒープ、
 | [docs/judgment/01_when_to_use_rust.md](docs/judgment/01_when_to_use_rust.md) | Rust を選ぶべき時・選ぶべきでない時 |
 | [docs/judgment/02_choosing_crates.md](docs/judgment/02_choosing_crates.md) | クレートの選び方・定番クレートが選ばれる理由 |
 | [docs/judgment/03_adr.md](docs/judgment/03_adr.md) | 技術判断を ADR として記録する |
+| [docs/judgment/04_api_design.md](docs/judgment/04_api_design.md) | API 設計: 引数や戻り値の型をどう選ぶか |
+| [docs/judgment/05_performance_judgment.md](docs/judgment/05_performance_judgment.md) | いつ・どう最適化するか |
+| [docs/judgment/06_rust_philosophy.md](docs/judgment/06_rust_philosophy.md) | Rust の歴史と思想 |
+
+### コードリーディングトラック
+
+標準ライブラリの実際のソースを、解説付きで読みます。→ [docs/reading/](docs/reading/)
+
+| # | 読むもの | 読むタイミング |
+|---|---|---|
+| 01 | `Option` / `Result` のメソッドと `?` の正体 | s04 の後 |
+| 02 | `Vec<T>` の内部構造と push | s05 の後 |
+| 03 | `String` と UTF-8 の検証 | s05 の後 |
+| 04 | `Iterator` とアダプタ、ゼロコスト抽象化 | s06 の後 |
 
 ### Part 3: プロジェクト（自分で設計して作る）
 
@@ -107,6 +134,21 @@ Part 3 では、要件だけが渡されます。設計と技術選定は自分�
 | [p03_http_server](projects/p03_http_server/SPEC.md) | マルチスレッド HTTP サーバ | TCP, スレッドプール, プロトコル実装 |
 | [p04_web_api](projects/p04_web_api/SPEC.md) | axum による REST API + DB | async, sqlx, 実務的な構成 |
 
+
+## おすすめの順番
+
+迷ったらこの順に進めてください。CS基礎は `CS`、コードリーディングは `読`、選球眼は `選` と略しています。
+
+1. 選01 → CS01・02・05 → **s01**
+2. CS03・04・06 → **s02** → **s03** → **s04** → 読01
+3. **s05** → 読02・03 → CS07 → **s06** → 読04
+4. **s07** → **s08**
+5. CS10 → **s09** → 選04 → CS08 → **s10** → CS09 → **s11**
+6. Part 3: 選02・03 → CS13 → **p01** → CS14 → **p02** → CS11 → **p03** → **p04**
+7. Part 4: **s12** → **s13** → **s14** → 選05 → CS12 → **s15**
+8. 選06 はいつ読んでも構いません
+
+Part 4 は、Part 3 の前に進めても構いません。
 
 ## 参考資料
 

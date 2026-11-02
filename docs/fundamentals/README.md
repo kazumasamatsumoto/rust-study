@@ -25,5 +25,9 @@ Rust は、コンピュータの中で実際に何が起きているかを隠さ
 | [08](08_concurrency.md) | プロセス・スレッド・データ競合 | `threads` | s10 |
 | [09](09_io_async.md) | I/O モデルと非同期処理 | `io_latency` | s11 |
 | [10](10_compilation.md) | コンパイルとリンク、最適化 | `optimization` | s09 |
+| [11](11_networking.md) | ネットワーク: TCP/IP と HTTP | `tcp_echo` | p03, p04 |
+| [12](12_memory_hierarchy.md) | メモリ階層と CPU キャッシュ | `cache` | s15 |
+| [13](13_os_syscalls.md) | OS とシステムコール、ファイル I/O | `syscalls` | p01, p02 |
+| [14](14_storage_engines.md) | データベースの保存の仕組み（ログ、B-tree、LSM） | `append_log` | p02 |
 
-速度を比べる実験（`dispatch`, `threads`, `optimization`, `io_latency`）は `--release` を付けて実行してください。
+速度を比べる実験（`dispatch`, `threads`, `optimization`, `io_latency`, `cache`, `syscalls`）は `--release` を付けて実行してください。

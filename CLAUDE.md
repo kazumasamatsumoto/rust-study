@@ -50,7 +50,8 @@
 ## カリキュラムの進め方
 
 - ロードマップは `README.md` にある。
-- s01〜s11 と CS基礎 01〜10、Part 3 の要件（`projects/*/SPEC.md`）は作成済み。
+- s01〜s15、CS基礎 01〜14、コードリーディング 01〜04、選球眼 01〜06、Part 3 の要件（`projects/*/SPEC.md`）は作成済み。
+- コードリーディングで標準ライブラリのソースを引用するときは、`rustc --print sysroot` 以下の rust-src から実際に抜き出し、Rust のバージョンを明記する。
 - 学習者の弱点に合わせて追加のステージや課題を作るときは、次の手順に従う:
   - `stages/sXX_name/` に lib クレートを作る（`cargo new --lib --vcs none`）
   - 既存ステージと同じ形式: `lib.rs` に概要と `#![allow(...)]`、`exNN_*.rs` に `todo!()` とテスト、

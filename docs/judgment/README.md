@@ -8,6 +8,9 @@
 | [01_when_to_use_rust.md](01_when_to_use_rust.md) | Rust を選ぶべき時・選ぶべきでない時 | 今すぐ |
 | [02_choosing_crates.md](02_choosing_crates.md) | クレート（ライブラリ）の選び方 | Stage 05 の前 |
 | [03_adr.md](03_adr.md) | 技術判断の記録の書き方（ADR） | Part 3 のプロジェクトの前 |
+| [04_api_design.md](04_api_design.md) | API 設計（命名、引数と戻り値の型、semver） | s09 の後 |
+| [05_performance_judgment.md](05_performance_judgment.md) | いつ・どう最適化するか | s15 の前 |
+| [06_rust_philosophy.md](06_rust_philosophy.md) | Rust の歴史と思想 | いつでも（息抜きに） |
 
 ## 判断の基本姿勢
 

@@ -78,6 +78,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "s12_macros"
+version = "0.1.0"
+
+[[package]]
+name = "s13_unsafe_ffi"
+version = "0.1.0"
+
+[[package]]
+name = "s14_type_design"
+version = "0.1.0"
+
+[[package]]
+name = "s15_performance"
+version = "0.1.0"
+
+[[package]]
 name = "syn"
 version = "3.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
